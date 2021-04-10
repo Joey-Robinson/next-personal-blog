@@ -6,7 +6,7 @@ const CoverImage = ({ title, src, slug }) => {
   return (
     <>
       {slug ? (
-        <Link as={`/newsletter/${slug}`} href="/newsletter/[slug]">
+        <Link as={`/blog/${slug}`} href="/blog/[slug]">
           <a aria-label={title}>{image}</a>
         </Link>
       ) : (

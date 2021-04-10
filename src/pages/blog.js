@@ -5,7 +5,7 @@ import Layout from "../components/global/global.layout"
 import GlobalSearch from '../components/global/global.search'
 
 // Use this for blog images. 4mb for 1 page, disgusting.
-const Newsletter = ({ allPosts }) => {
+const Blog = ({ allPosts }) => {
   const morePosts = allPosts
   const emptyQuery = ""
   const [filteredPosts, setFilteredPosts] = useState({
@@ -35,17 +35,16 @@ const Newsletter = ({ allPosts }) => {
 
   return (
     <Layout className="post--news">
-      <SEO title="Newsletter" description="Monthly Anime Musings" />
       <GlobalSearch
         onSubmit={(event) => event.preventDefault()}
         value={query}
         onChange={handleInputChange}
-        placeholder="Search Newsletters"
-        id="newsletter--search"
-        spanText="Search Newsletters"
-        ariaLabel="Search Newsletters"
-        label="Search Newsletters"
-        idFor="newsletter--search"
+        placeholder="Search Blog"
+        id="blog--search"
+        spanText="Search Blog"
+        ariaLabel="Search Blog"
+        label="Search Blog"
+        idFor="blog--search"
         submitStyle={{ display: "none" }}
       />
       <div className="container">
@@ -86,4 +85,4 @@ export async function getStaticProps() {
   }
 }
 
-export default Newsletter
+export default Blog

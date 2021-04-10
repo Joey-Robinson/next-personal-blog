@@ -9,7 +9,7 @@ const PostPreview = memo(
     return (
       <li key={title} className="blog--li news">
         <h2>
-          <Link as={`/newsletter/${slug}`} href="/newsletter/[slug]">
+          <Link as={`/blog/${slug}`} href="/blog/[slug]">
             <a>{title}</a>
           </Link>
         </h2>
